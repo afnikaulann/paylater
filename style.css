@@ -1,0 +1,156 @@
+/* ==========================================================
+   STYLE KHUSUS SHOPEEPAY PROMO SINGLE-PAGE THEME
+   ========================================================== */
+
+/* Custom Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Pulsing Hotspot over QRIS Phone in the Hero Banner */
+.tap-hotspot {
+  position: absolute;
+  top: 55%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 25;
+}
+
+.tap-circle {
+  width: 52px;
+  height: 52px;
+  background: rgba(238, 77, 45, 0.95);
+  border: 3px solid #ffeb3b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255, 235, 59, 0.8), 0 0 10px rgba(238, 77, 45, 0.9);
+  transition: transform 0.2s ease;
+}
+
+.tap-hotspot:hover .tap-circle {
+  transform: scale(1.15);
+}
+
+.tap-pulse {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(255, 235, 59, 0.4);
+  animation: pulse-ring 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.tap-label {
+  margin-top: 4px;
+  background: #ffeb3b;
+  color: #a81c07;
+  font-weight: 900;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  white-space: nowrap;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  80%, 100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Slow bouncing CTA animation */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2.2s infinite ease-in-out;
+}
+
+/* QRIS Laser Scan Effect */
+.qris-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-laser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff2a00, #ffea00, transparent);
+  box-shadow: 0 0 12px #ff3b00;
+  animation: laser-move 2s ease-in-out infinite alternate;
+}
+
+@keyframes laser-move {
+  0% {
+    top: 5%;
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 92%;
+    opacity: 0.3;
+  }
+}
+
+/* Mystery Box selected animation */
+.mystery-box.selected {
+  border-color: #facc15;
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+/* Keyframe Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #200832;
+}
+::-webkit-scrollbar-thumb {
+  background: #ee4d2d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
