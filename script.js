@@ -24,12 +24,12 @@ const toastReward = document.getElementById('toast-reward');
 const toastTime = document.getElementById('toast-time');
 
 const fakeUsers = [
-  { phone: '0812***8491', reward: 'Berjaya tebus Saldo RM 50.00' },
-  { phone: '0857***1022', reward: 'Berjaya tebus Saldo Rp 150.000' },
-  { phone: '0112***7721', reward: 'Berjaya tebus Voucher 100%' },
-  { phone: '0821***9034', reward: 'Berjaya tebus Saldo RM 100.00' },
-  { phone: '0896***4419', reward: 'Berjaya tebus Pulsa & Top Up' },
-  { phone: '0139***6520', reward: 'Berjaya tebus Saldo ShopeePay' }
+  { phone: '0812***8491', reward: 'Berjaya tebus Baki RM 300.00' },
+  { phone: '0857***1022', reward: 'Berjaya tebus Baki RM 300.00' },
+  { phone: '0112***7721', reward: 'Berjaya tebus Baki RM 300.00' },
+  { phone: '0821***9034', reward: 'Berjaya tebus Baki RM 300.00' },
+  { phone: '0896***4419', reward: 'Berjaya tebus Baki RM 300.00' },
+  { phone: '0139***6520', reward: 'Berjaya tebus Baki ShopeePay RM 300' }
 ];
 
 function showToast() {
